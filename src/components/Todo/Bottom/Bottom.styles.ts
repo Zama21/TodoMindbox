@@ -12,7 +12,8 @@ export const BottomWrapper = styled.div`
 export const StyledButton = styled.button`
   transition: color 0.5s ease-out;
   padding: 4px;
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: black;
   }
 `;

@@ -21,6 +21,7 @@ export const FiltersBar = () => {
         <FilterButton
           key={f}
           onClick={() => handleFilterChange(f)}
+          onFocus={() => handleFilterChange(f)}
           isActive={filter === f}
         >
           {f.charAt(0).toUpperCase() + f.slice(1)}

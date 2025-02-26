@@ -42,6 +42,11 @@ export const StyledBaseCheckbox = styled(BaseCheckbox)`
   position: relative;
   ${(props) => (props.checked ? 'color:#d9d9d9' : null)};
   transition: color 0.5s ease-out;
+
+  &:hover,
+  &:focus-within {
+    box-shadow: 0px 0px 5px 0px rgba(34, 60, 80, 0.2) inset;
+  }
 `;
 
 export const StylesSpan = styled.span<{ checked: boolean }>`

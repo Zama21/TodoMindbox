@@ -12,6 +12,12 @@ export const Wrapper = styled.div`
 
 export const StyledButton = styled.button`
   display: flex;
+  transition: color 0.5s ease-out;
+
+  &:hover,
+  &:focus-visible {
+    color: #868686;
+  }
 `;
 
 export const StyledArrowDownIcon = styled(ArrowDownIcon)`
