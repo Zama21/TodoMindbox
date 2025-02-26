@@ -131,7 +131,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -165,7 +165,7 @@ input::-ms-clear {
 }
 
 button,
-input[type="submit"] {
+input[type='submit'] {
   display: inline-block;
   box-shadow: none;
   background-color: transparent;
@@ -196,4 +196,16 @@ dl,
 ol,
 ul {
   padding-left: 0;
+}
+
+body,
+html {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }

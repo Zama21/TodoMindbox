@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import TodoPage from "./pages/TodoPage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { TodoPage } from './pages';
 
 export default function AppRouter() {
   return (
