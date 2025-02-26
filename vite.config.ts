@@ -5,6 +5,7 @@ import { resolve } from 'path';
 
 export default defineConfig({
   plugins: [react(), svgr()],
+  base: '/TodoMindbox/',
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

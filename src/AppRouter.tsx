@@ -5,7 +5,7 @@ export default function AppRouter() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<TodoPage />} />
+        <Route path="/TodoMindbox/" element={<TodoPage />} />
       </Routes>
     </BrowserRouter>
   );
