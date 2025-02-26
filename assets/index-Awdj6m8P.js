@@ -268,4 +268,4 @@ Please change the parent <Route path="${B}"> to <Route path="${B==="/"?"*":`${B}
   color: #e9d9d8;
   text-align: center;
   padding: 16px;
-`,CS=()=>ue.jsxs(RS,{children:[ue.jsx(OS,{children:"Todos"}),ue.jsx(AS,{children:ue.jsx(_S,{})})]});function DS(){return ue.jsx(_g,{children:ue.jsx(eg,{children:ue.jsx(Im,{path:"/",element:ue.jsx(CS,{})})})})}const MS=_b({reducer:{todo:Xb}});f0.createRoot(document.getElementById("root")).render(ue.jsx(A.StrictMode,{children:ue.jsx($g,{store:MS,children:ue.jsx(DS,{})})}));
+`,CS=()=>ue.jsxs(RS,{children:[ue.jsx(OS,{children:"Todos"}),ue.jsx(AS,{children:ue.jsx(_S,{})})]});function DS(){return ue.jsx(_g,{children:ue.jsx(eg,{children:ue.jsx(Im,{path:"/TodoMindbox/",element:ue.jsx(CS,{})})})})}const MS=_b({reducer:{todo:Xb}});f0.createRoot(document.getElementById("root")).render(ue.jsx(A.StrictMode,{children:ue.jsx($g,{store:MS,children:ue.jsx(DS,{})})}));
