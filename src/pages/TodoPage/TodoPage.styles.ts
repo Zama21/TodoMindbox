@@ -1,3 +1,4 @@
+import { BREAKPOINTS } from '@/constants/device';
 import styled from '@emotion/styled';
 
 export const MainWrapper = styled.section`
@@ -18,4 +19,16 @@ export const MainTitle = styled.h1`
   color: #e9d9d8;
   text-align: center;
   padding: 16px;
+
+  @media (min-width: ${BREAKPOINTS.sm}px) {
+    font-size: 96px;
+  }
+
+  @media (min-width: ${BREAKPOINTS.md}px) {
+    font-size: 128px;
+  }
+
+  @media (min-width: ${BREAKPOINTS.xl}px) {
+    font-size: 160px;
+  }
 `;

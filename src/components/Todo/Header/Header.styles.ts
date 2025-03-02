@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import ArrowDownIcon from '@/assets/icons/arrowDown.svg?react';
 import { BaseInput } from '@/shared';
+import { BREAKPOINTS } from '@/constants/device';
 
 export const Wrapper = styled.div`
   display: flex;
@@ -8,6 +9,11 @@ export const Wrapper = styled.div`
   padding: 4px;
   color: #e6e6e6;
   gap: 8px;
+  height: 48px;
+
+  @media (min-width: ${BREAKPOINTS.md}px) {
+    height: 64px;
+  }
 `;
 
 export const StyledButton = styled.button`
@@ -21,11 +27,15 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledArrowDownIcon = styled(ArrowDownIcon)`
-  height: 24px;
+  height: 32px;
+
+  @media (min-width: ${BREAKPOINTS.md}px) {
+    height: 48px;
+  }
 `;
 
 export const StyledBaseInput = styled(BaseInput)`
-  height: 24px;
+  min-height: 24px;
   border: none;
   color: black;
 

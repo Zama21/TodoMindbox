@@ -13,7 +13,7 @@ export const Todo = () => {
     <TodoWrapper>
       <Header onToggle={toggleTodoBody} onOpen={() => setIsOpen(true)} />
       <TodoBody isOpen={isOpen}>
-        <div style={{ minHeight: 0 }}>
+        <div style={{ minHeight: 0, overflow: 'hidden' }}>
           <TaskList />
           <Bottom />
         </div>

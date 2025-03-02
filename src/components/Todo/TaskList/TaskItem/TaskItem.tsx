@@ -20,7 +20,7 @@ export const TaskItem = forwardRef<HTMLLIElement, TaskItemProps>(
 
     return (
       <TaskItemWrapper ref={ref}>
-        <div style={{ minHeight: 0 }}>
+        <div style={{ minHeight: 0, overflow: 'hidden' }}>
           <StyledBaseCheckbox
             checked={isChecked}
             onChange={handleCheckboxChange}

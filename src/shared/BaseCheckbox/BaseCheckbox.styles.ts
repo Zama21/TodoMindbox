@@ -26,9 +26,10 @@ export const StyledCheckboxView = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
-  border-radius: 12px;
+  height: 100%;
+  min-height: 10px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
   background-color: white;
   cursor: pointer;
   position: relative;

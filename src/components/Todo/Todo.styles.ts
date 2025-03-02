@@ -1,10 +1,11 @@
+import { BREAKPOINTS } from '@/constants/device';
 import styled from '@emotion/styled';
 
 export const TodoWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 80%;
+  width: 95%;
   background: #fefefe;
   box-shadow: 0px 0px 8px 0px rgba(34, 60, 80, 0.2);
   margin-bottom: 8px;
@@ -28,6 +29,10 @@ export const TodoWrapper = styled.div`
   &::before {
     width: 98%;
     bottom: -8px;
+  }
+
+  @media (min-width: ${BREAKPOINTS.lg}px) {
+    width: 85%;
   }
 `;
 

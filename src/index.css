@@ -204,6 +204,22 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  font-size: 16px;
+
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 28px;
+  }
+
+  @media (min-width: 1536px) {
+    font-size: 36px;
+  }
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

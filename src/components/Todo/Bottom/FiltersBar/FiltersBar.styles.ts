@@ -1,8 +1,13 @@
+import { BREAKPOINTS } from '@/constants/device';
 import styled from '@emotion/styled';
 
 export const FiltersBarWrapper = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 4px;
+
+  @media (min-width: ${BREAKPOINTS.sm}px) {
+    gap: 8px;
+  }
 `;
 
 export const FilterButton = styled.button<{ isActive: boolean }>`

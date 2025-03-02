@@ -1,3 +1,4 @@
+import { BREAKPOINTS } from '@/constants/device';
 import { BaseCheckbox } from '@/shared';
 import styled from '@emotion/styled';
 
@@ -37,7 +38,8 @@ export const TaskItemWrapper = styled.li`
 
 export const StyledBaseCheckbox = styled(BaseCheckbox)`
   width: 100%;
-  padding: 8px 4px 8px 4px;
+  height: 42px;
+  padding: 8px 4px 8px 8px;
   gap: 16px;
   position: relative;
   ${(props) => (props.checked ? 'color:#d9d9d9' : null)};
@@ -47,12 +49,24 @@ export const StyledBaseCheckbox = styled(BaseCheckbox)`
   &:focus-within {
     box-shadow: 0px 0px 5px 0px rgba(34, 60, 80, 0.2) inset;
   }
+
+  @media (min-width: ${BREAKPOINTS.sm}px) {
+    padding: 12px 4px 12px 8px;
+    height: 52px;
+  }
+
+  @media (min-width: ${BREAKPOINTS.md}px) {
+    height: 64px;
+    padding: 16px;
+    padding-left: 12px;
+  }
 `;
 
 export const StylesSpan = styled.span<{ checked: boolean }>`
   display: flex;
   align-items: center;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: '';
