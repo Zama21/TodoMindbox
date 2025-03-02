@@ -1,10 +1,15 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Todo, TodoState } from './todoSlice.types';
 
-const initialState: TodoState = {
-  todos: [],
-  currentFilter: 'all',
+export const loadTodosFromLocalStorage = () => {
+  const todos = localStorage.getItem('todos');
+  return todos ? JSON.parse(todos) : { todos: [], currentFilter: 'all' };
 };
+
+export const saveTodos = (todos: TodoState) =>
+  localStorage.setItem('todos', JSON.stringify(todos));
+
+const initialState: TodoState = loadTodosFromLocalStorage();
 
 const todoSlice = createSlice({
   name: 'todo',
@@ -18,6 +23,7 @@ const todoSlice = createSlice({
         isHide: state.currentFilter == 'completed',
       };
       state.todos.push(newTodo);
+      saveTodos(state);
     },
     toggleTodo: (state, action: PayloadAction<string>) => {
       const todo = state.todos.find((todo) => todo.id === action.payload);
@@ -28,9 +34,11 @@ const todoSlice = createSlice({
         else if (state.currentFilter == 'active' && todo.completed)
           todo.isHide = true;
       }
+      saveTodos(state);
     },
     clearCompleted: (state) => {
       state.todos = state.todos.filter((todo) => !todo.completed);
+      saveTodos(state);
     },
     setTodoVisibility: (
       state,
@@ -47,6 +55,7 @@ const todoSlice = createSlice({
           todo.isHide = !todo.completed;
         }
       });
+      saveTodos(state);
     },
   },
 });
